@@ -1,6 +1,4 @@
 <?php
-require '../config.php';
-
 /**
  * classe connesione al database
  * singleton
