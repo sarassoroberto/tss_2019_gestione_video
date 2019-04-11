@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>sono il template figlio test</h1>
+
+    {% for autore in autori %}
+        {{autore.nome}}
+        <br>
+    {% endfor %}
+
+{% endblock %}
