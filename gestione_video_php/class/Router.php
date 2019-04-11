@@ -7,38 +7,70 @@
  */
 class Router
 {
-    const ROUTE_ERROR_CONTROLLER_NOT_EXIST = 0;
-    const ROUTE_ERROR_CONTROLLER_NOT_EXIST_MSG = 'Il controller richiesto non esiste';
 
     public static function getRoute()
     {
         try {
-            $controller = filter_input(INPUT_GET, 'controller', FILTER_SANITIZE_STRING, array('default' => Config::DEFAULT_CONTROLLER));
-            // var_dump(isset($controller));
+            $controller = filter_input(INPUT_GET, 'controller');
             $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING, array('default' => Config::DEFAULT_ACTION));
-            //var_dump(empty($action));
 
-            // var_dump(class_exists($controllerName, true));
-            //echo $controllerName;
-            $controllerName = ucfirst($controller) . '_controller';
-
-            if (!class_exists($controllerName, true)) {
-
-                $controller_attivo = new $controllerName();
-                if (method_exists($controller, $action)) {}
-            } else {
-                if (class_exists($controllerName, true)) {}
-                throw new Exception(Router::ROUTE_ERROR_CONTROLLER_NOT_EXIST_MSG, Router::ROUTE_ERROR_CONTROLLER_NOT_EXIST);
+            if (empty($controller)) {
+                $controller = Config::DEFAULT_CONTROLLER;
             }
 
+            if (empty($action)) {
+                $action = Config::DEFAULT_ACTION;
+            }
+
+            $controllerName = ucfirst($controller) . '_controller';
+
+            if (!method_exists($controllerName, $action)) {
+                header("HTTP/1.0 404 Not Found");
+                die();
+            }
+
+            $controller_attivo = new $controllerName();
             $controller_attivo->$action();
 
-            //echo $controllerName . "<br>";
-            /**
-             * @todo: definire un controller predefinito, o impostare la risposta http con codice 404
-             */
         } catch (Exception $e) {
             echo $e->getMessage();
         }
     }
+
+    /**
+     * @example
+     *  Router::link('controller/action/key/value/key2/value2');
+     *  Router::link('gestione_utenti/tutti/key/value/key2/value2');
+     *
+     *  link("gestione_utenti/tutti")
+     *  link("gestione_utenti/elimina/id")
+     *  link("gestione_utenti/elimina/id")
+     *
+     * @param [type] $url_str
+     * @return void
+     */
+    public static function link($url_str)
+    {
+
+        $url_parts = explode('/', $url_str);
+
+        $controller_action_parts = array_splice($url_parts, 0, 2);
+
+        $query = http_build_query(array(
+            'controller' => $controller_action_parts[0],
+            'action' => $controller_action_parts[1],
+        ));
+
+        $params = array();
+
+        while (count($url_parts)) {
+            list($key, $value) = array_splice($url_parts, 0, 2);
+            $params[$key] = $value;
+        }
+
+        $params_query = http_build_query($params);
+
+        echo 'index.php?' . $query . '&' . $params_query;
+    }
+
 }
