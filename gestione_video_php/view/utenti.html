@@ -272,80 +272,127 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                </div>
-                <!-- tabella utenti-->
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Striped Table</h4>
-                        <p class="card-description">
-                            Add class
-                            <code>.table-striped</code>
-                        </p>
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            #
-                                        </th>
-                                        <th>
-                                            #
-                                        </th>
-                                        <th>
-                                            avatar
-                                        </th>
-                                        <th>
-                                            nome
-                                        </th>
-                                        <th>
-                                            cognome
-                                        </th>
-                                        <th>
-                                            email
-                                        </th>
-                                        <th>
-                                            verifica
-                                        </th>
-                                        <th>
-                                            elimina
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" name="" id="">
-                                        </td>
-                                        <td>
-                                            #
-                                        </td>
-                                        <td class="py-1">
-                                            <img src="../../images/faces-clipart/pic-1.png" alt="image">
-                                        </td>
-                                        <td>
-                                            paolo
-                                        </td>
-                                        <td>
-                                            rossi
-                                        </td>
-                                        <td>
-                                            email@a.it
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-icons btn-rounded btn-light">
-                                                <i class="mdi mdi-home-outline"></i>
-                                            </button>
+                    <!-- tabella utenti-->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Tutti gli utenti</h3>
 
-                                        </td>
-                                    </tr>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
 
-                                </tbody>
-                            </table>
+                                            <th>
+                                                id
+                                            </th>
+                                            <th>
+                                                avatar
+                                            </th>
+                                            <th>
+                                                nome
+                                            </th>
+                                            <th>
+                                                cognome
+                                            </th>
+                                            <th>
+                                                email
+                                            </th>
+                                            <th>
+                                                varificato
+                                            </th>
+                                            <th>
+                                                elimina
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                                100
+                                            </td>
+
+                                            <td class="py-1">
+                                                <img src="https://placeimg.com/64/64/people" alt="nome cognome">
+                                            </td>
+                                            <td>
+                                                paolo
+                                            </td>
+                                            <td>
+                                                rossi
+                                            </td>
+                                            <td>
+                                                email@a.it
+                                            </td>
+                                            <td>
+                                                <label class="badge badge-danger">Pending</label>
+                                            </td>
+                                            <td>
+
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle" type="button"
+                                                        id="autore_menu" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        gestisci
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="autore_menu">
+                                                        <a class="dropdown-item text" href="#">elimina</a>
+                                                        <a class="dropdown-item" href="#">info</a>
+                                                        <a class="dropdown-item" href="#">abilita</a>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                                100
+                                            </td>
+                                            <td class="py-1">
+                                                <img src="https://placeimg.com/64/64/people" alt="nome cognome">
+                                            </td>
+                                            <td>
+                                                paolo
+                                            </td>
+                                            <td>
+                                                rossi
+                                            </td>
+                                            <td>
+                                                email@a.it
+                                            </td>
+                                            <td>
+                                                <label class="badge badge-success">accettato</label>
+                                            </td>
+                                            <td>
+
+                                                <div class="dropdown">
+                                                    <button class="btn btn-primary dropdown-toggle" type="button"
+                                                        id="autore_menu" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        gestisci
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="autore_menu">
+                                                        <a class="dropdown-item text" href="#">elimina</a>
+                                                        <a class="dropdown-item" href="#">info</a>
+                                                        <a class="dropdown-item" href="#">abilita</a>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- fine - tabella utenti-->
                 </div>
 
-                <!-- fine - tabella utenti-->
+
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
