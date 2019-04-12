@@ -336,9 +336,9 @@
                                                         gestisci
                                                     </button>
                                                     <div class="dropdown-menu" aria-labelledby="autore_menu">
-                                                        <a class="dropdown-item text" href="#">elimina</a>
-                                                        <a class="dropdown-item" href="#">info</a>
-                                                        <a class="dropdown-item" href="#">abilita</a>
+                                                        <a class="dropdown-item text-danger" href="#">elimina</a>
+                                                        <a class="dropdown-item text-primary" href="#">info</a>
+                                                        <a class="dropdown-item text-primary" href="#">abilita</a>
                                                     </div>
                                                 </div>
 
@@ -367,6 +367,13 @@
                                             </td>
                                             <td>
 
+
+                                                <!-- Button trigger modal -->
+                                                <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#profilo_utente_modal">
+                                                    Launch demo modal
+                                                </button> -->
+
                                                 <div class="dropdown">
                                                     <button class="btn btn-primary dropdown-toggle" type="button"
                                                         id="autore_menu" data-toggle="dropdown" aria-haspopup="true"
@@ -374,9 +381,9 @@
                                                         gestisci
                                                     </button>
                                                     <div class="dropdown-menu" aria-labelledby="autore_menu">
-                                                        <a class="dropdown-item text" href="#">elimina</a>
-                                                        <a class="dropdown-item" href="#">info</a>
-                                                        <a class="dropdown-item" href="#">abilita</a>
+                                                        <a class="dropdown-item text-danger" href="#">elimina</a>
+                                                        <a class="dropdown-item text-primary" href="#">info</a>
+                                                        <a class="dropdown-item text-primary" href="#">abilita</a>
                                                     </div>
                                                 </div>
 
@@ -390,6 +397,7 @@
                     </div>
 
                     <!-- fine - tabella utenti-->
+
                 </div>
 
 
@@ -425,6 +433,28 @@
     <!-- endinject -->
     <!-- Custom js for this page-->
     <!-- End custom js for this page-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="profilo_utente_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sintesi profilo utente</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
