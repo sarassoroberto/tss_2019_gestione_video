@@ -1,1 +1,92 @@
-<h2>sono tabella utenti</h2>
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Tutti gli utenti</h3>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+
+                        <th>
+                            id
+                        </th>
+                        <th>
+                            avatar
+                        </th>
+                        <th>
+                            nome
+                        </th>
+                        <th>
+                            cognome
+                        </th>
+                        <th>
+                            email
+                        </th>
+                        <th>
+                            verificato
+                        </th>
+                        <th>
+                            elimina
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- fuori loop  -->
+
+
+                    {% for autore in autori %}
+                        <tr>
+                            <td>
+                                <input id="" name="" type="checkbox">
+                                100
+                            </td>
+
+                            <td class="py-1">
+                                <img alt="{{autore.nome}} {{autore.cognome}}" src="https://placeimg.com/64/64/people">
+                            </td>
+                            <td>
+
+                                {{autore.nome}}
+
+                            </td>
+                            <td>
+                                {{autore.cognome}}
+                            </td>
+                            <td>
+                                email@a.it
+                            </td>
+                            <td>
+                                {# {% if autore. %}
+                                                                
+                                                                                                    <label class="badge badge-danger">da approvare</label>
+                                                                
+                                                                                                {% else %}
+                                                                
+                                                                                                    <label class="badge badge-success">approvato</label>
+                                                                
+                                                                
+                                                                                                {% endif %} #}
+
+                            </td>
+                            <td>
+
+                                <div class="dropdown">
+                                    <button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="autore_menu" type="button">
+                                        gestisci
+                                    </button>
+                                    <div aria-labelledby="autore_menu" class="dropdown-menu">
+                                        <a class="dropdown-item text-danger" href="index.php?controller=gestione_utenti&action=eliminaAutore&id={{autore.id_autore}}">elimina</a>
+                                        <a class="dropdown-item text-primary" href="#">info</a>
+                                        <a class="dropdown-item text-primary" href="#">abilita</a>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <!-- fuori dal loop  -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
