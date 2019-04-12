@@ -10,31 +10,28 @@ class Router
 
     public static function getRoute()
     {
-        try {
-            $controller = filter_input(INPUT_GET, 'controller');
-            $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING, array('default' => Config::DEFAULT_ACTION));
 
-            if (empty($controller)) {
-                $controller = Config::DEFAULT_CONTROLLER;
-            }
+        $controller = filter_input(INPUT_GET, 'controller');
+        $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING, array('default' => Config::DEFAULT_ACTION));
 
-            if (empty($action)) {
-                $action = Config::DEFAULT_ACTION;
-            }
-
-            $controllerName = ucfirst($controller) . '_controller';
-
-            if (!method_exists($controllerName, $action)) {
-                header("HTTP/1.0 404 Not Found");
-                die();
-            }
-
-            $controller_attivo = new $controllerName();
-            $controller_attivo->$action();
-
-        } catch (Exception $e) {
-            echo $e->getMessage();
+        if (empty($controller)) {
+            $controller = Config::DEFAULT_CONTROLLER;
         }
+
+        if (empty($action)) {
+            $action = Config::DEFAULT_ACTION;
+        }
+
+        $controllerName = ucfirst($controller) . '_controller';
+
+        if (!method_exists($controllerName, $action)) {
+            header("HTTP/1.0 404 Not Found");
+            die();
+        }
+
+        $controller_attivo = new $controllerName();
+        $controller_attivo->$action();
+
     }
 
     /**
