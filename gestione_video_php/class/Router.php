@@ -12,7 +12,7 @@ class Router
     {
 
         $controller = filter_input(INPUT_GET, 'controller');
-        $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING, array('default' => Config::DEFAULT_ACTION));
+        $action = filter_input(INPUT_GET, 'action');
 
         if (empty($controller)) {
             $controller = Config::DEFAULT_CONTROLLER;
