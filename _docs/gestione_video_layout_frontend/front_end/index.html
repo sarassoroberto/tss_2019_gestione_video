@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Album</title>
+  <meta name="description" content="Wireframe design of an album page by Pingendo">
+  <meta name="keywords" content="Pingendo bootstrap example template wireframe album ">
+  <meta name="author" content="Pingendo">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="wireframe.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+        data-target="#navbar12">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar12">
+        <a class="navbar-brand d-none d-md-block" href="#">
+          <i class="fa d-inline fa-lg fa-camera"></i>
+          <b> {{nome applicazione}}</b>
+        </a>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+
+        <ul class="navbar-nav">
+          <li class="nav-item"> <a class="nav-link" href="#">Log in</a> </li>
+          <li class="nav-item"> <a class="nav-link text-primary" href="#">Register</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- subscribe banner -->
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-9">
+        <h1>Video&nbsp;awesome TSS</h1>
+        <p class="lead text-muted">entra anche tu nella community</p>
+        <a href="#" class="btn btn-primary m-2">Iscriviti</a>
+        <a href="#" class="btn btn-secondary m-2">Accedi</a>
+      </div>
+    </div>
+  </div>
+  <!-- / subscribe banner -->
+  <!-- main -->
+  <main id="main-content" class="py-2 bg-light">
+    <div class="container">
+
+      <!-- item-list-miniature -->
+      <section class="row item-list-miniature">
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-1">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-3 pb-2">
+          <article class="card box-shadow">
+            <img class="card-img-top" src="https://placekitten.com/120/80">
+            <div class="card-body">
+              <div class="header d-flex justify-content-between align-items-center">
+                <h1 class="h5">{{Titolo}}</h1> <small class="text-muted"><i
+                    class="far fa-clock mr-1"></i>{{durata}}</small>
+              </div>
+              <p class="card-text">{{description}}</p>
+              <div class="autore">
+                <img src="https://placekitten.com/32/32" class="rounded-circle" alt="{{nome}} {{cognome}}">
+                {{nome}} {{cognome}}
+              </div>
+              <section class="like-group d-flex align-items-center">
+                <header class="d-flex">
+                  <b>
+                    {{nlike}}
+                  </b> like </header>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                  <button type="button" class="btn  text-success btn-outline-light"><i
+                      class="fas fa-thumbs-up"></i></button>
+                  <button type="button" class="btn  text-danger btn-outline-light"><i
+                      class="fas fa-thumbs-down"></i></button>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+
+      </section>
+      <!-- / item-list-miniature -->
+    </div>
+  </main>
+  <!-- /end main-->
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>Album template is based on Bootstrap © examples.&nbsp; <br>New to Bootstrap? <a href="#">Visit the homepage</a>
+        or read our <a href="#">getting started guide</a>.</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')"
+    style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">
+    Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block"
+      alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
