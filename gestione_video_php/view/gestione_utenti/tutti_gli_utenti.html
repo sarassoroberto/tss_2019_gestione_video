@@ -4,9 +4,6 @@
 
     <h1>sono il template figlio test</h1>
 
-    {% for autore in autori %}
-        {{autore.nome}}
-        <br>
-    {% endfor %}
+    {% include "partial/tabella_utenti.html" %}
 
 {% endblock %}

@@ -18,7 +18,7 @@ class Gestione_utenti_controller
         $loader = new \Twig\Loader\FilesystemLoader('./view');
         $twig = new \Twig\Environment($loader);
 
-        echo $twig->render('test.html', ['autori' => $res]);
+        echo $twig->render('gestione_utenti/tutti_gli_utenti.html', ['autori' => $res]);
         //print_r($twig);
     }
 }
