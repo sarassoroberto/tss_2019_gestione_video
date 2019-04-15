@@ -34,4 +34,10 @@ class Gestione_utenti_controller
         $url = "index.php?controller=gestione_utenti&action=tutti";
         //header("Location: $url");
     }
+
+    public function infoAutore()
+    {
+        $id_autore = filter_input(INPUT_GET,'id');
+        $this->view->render('gestione_utenti/info_autore.html',[]);
+    }
 }
