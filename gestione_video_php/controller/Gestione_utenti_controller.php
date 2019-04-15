@@ -20,7 +20,10 @@ class Gestione_utenti_controller
 
         echo $twig->render(
             'gestione_utenti/tutti_gli_utenti.html',
-            ['autori' => $res]
+            [
+                'autori' => $res,
+                'sezione' => 'Gestione degli utenti (tutti)'
+            ]
         );
         //print_r($twig);
     }
