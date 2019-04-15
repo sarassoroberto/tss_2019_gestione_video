@@ -14,16 +14,7 @@ class ViewCore
 
         // {{ link(controller,action) }}
         // {{ link() }}
-        $function = new TwigFunction('link', function ($controller, $action, $parameter) {
-
-            print_r($parameter);
-
-            $url = SITE_URL . "index.php?controller=$controller&action=$action";
-
-            return $url;
-        });
-
-
+        $function = new TwigFunction('link', 'RouterCore::link');
 
         $this->twig->addFunction($function);
     }

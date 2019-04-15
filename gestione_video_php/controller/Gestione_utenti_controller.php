@@ -27,16 +27,19 @@ class Gestione_utenti_controller
 
     public function eliminaAutore()
     {
-        echo __FUNCTION__;
         $id_autore = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+        echo __FUNCTION__ . " $id_autore";
+
         // echo "elimina autore $id_autore";
 
-        // if ($id_autore) {
-        //     $dao = new AutoreDao();
-        //     $dao->delete($id_autore);
-        // }
-        // // "gestione_utenti/tutti"
-        // $url = "index.php?controller=gestione_utenti&action=tutti";
-        // //header("Location: $url");
+        if ($id_autore) {
+            $dao = new AutoreDao();
+            $dao->delete($id_autore);
+        }
+
+
+        $url = RouterCore::link('gestione_utenti', 'tutti');
+        header("Location: $url");
     }
 }
