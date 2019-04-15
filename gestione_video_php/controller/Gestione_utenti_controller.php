@@ -2,9 +2,11 @@
 
 class Gestione_utenti_controller
 {
+    private $view ;
     public function __construct()
     {
         //echo "sono il costruttore: " . __CLASS__ . " " . __FUNCTION__ . '<br>';
+        $this->view = new ViewCore();
     }
 
     public function tutti()
@@ -14,15 +16,9 @@ class Gestione_utenti_controller
         $utentiDao = new AutoreDao();
         $res = $utentiDao->read();
 
+        $this->view->render( 'gestione_utenti/tutti_gli_utenti.html',['autori' => $res]);
 
-        $loader = new \Twig\Loader\FilesystemLoader('./view');
-        $twig = new \Twig\Environment($loader);
-
-        echo $twig->render(
-            'gestione_utenti/tutti_gli_utenti.html',
-            ['autori' => $res]
-        );
-        //print_r($twig);
+      
     }
 
     public function eliminaAutore()

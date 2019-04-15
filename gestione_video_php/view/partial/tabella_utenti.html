@@ -76,6 +76,7 @@
                                             <a class="dropdown-item text-success" href="#">abilita</a>
                                         {% endif %}
                                         <a class="dropdown-item text-white bg-danger" href="index.php?controller=gestione_utenti&action=eliminaAutore&id={{autore.id_autore}}">elimina</a>
+                                        <a class="dropdown-item text-white bg-danger" href="{{ link('gestione_utenti','eliminaAutore', {id:autore.id_autore} ) }}">elimina</a>
                                     </div>
                                 </div>
 
