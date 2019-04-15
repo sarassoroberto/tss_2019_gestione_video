@@ -38,34 +38,27 @@
                         <tr>
                             <td>
                                 <input id="" name="" type="checkbox">
-                                100
+                                {{autore.id_autore}}
                             </td>
 
                             <td class="py-1">
-                                <img alt="{{autore.nome}} {{autore.cognome}}" src="https://placeimg.com/64/64/people">
+                                <img alt="{{autore.nome}} {{autore.cognome}}" src="{{autore.avatar}}">
                             </td>
                             <td>
-
                                 {{autore.nome}}
-
                             </td>
                             <td>
                                 {{autore.cognome}}
                             </td>
                             <td>
-                                email@a.it
+                                {{autore.email}}
                             </td>
                             <td>
-                                {# {% if autore. %}
-                                                                
-                                                                                                    <label class="badge badge-danger">da approvare</label>
-                                                                
-                                                                                                {% else %}
-                                                                
-                                                                                                    <label class="badge badge-success">approvato</label>
-                                                                
-                                                                
-                                                                                                {% endif %} #}
+                                {% if autore.verifica %}
+                                    autore verificato
+                                {% else %}
+                                    autore non verificato
+                                {% endif %}
 
                             </td>
                             <td>
