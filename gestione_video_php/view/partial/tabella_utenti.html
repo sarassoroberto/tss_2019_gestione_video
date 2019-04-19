@@ -44,52 +44,56 @@
 
 
                         {% for autore in autori %}
-                            <tr>
-                                <td>
-                                    <input id="" class="chk_id_autore" name="id_autore[]" value="{{autore.id_autore}}" type="checkbox">
-                                    {{autore.id_autore}}
-                                </td>
+                        <tr>
+                            <td>
+                                <input id="" class="chk_id_autore" name="id_autore[]" value="{{autore.id_autore}}"
+                                    type="checkbox">
+                                {{autore.id_autore}}
+                            </td>
 
-                                <td class="py-1">
-                                    <img alt="{{autore.nome}} {{autore.cognome}}" src="{{autore.avatar}}">
-                                </td>
-                                <td>
-                                    {{autore.nome}}
-                                </td>
-                                <td>
-                                    {{autore.cognome}}
-                                </td>
-                                <td>
-                                    {{autore.email}}
-                                </td>
-                                <td>
-                                    {% if autore.verifica %}
-                                        autore verificato
-                                    {% else %}
-                                        autore non verificato
-                                    {% endif %}
+                            <td class="py-1">
+                                <img alt="{{autore.nome}} {{autore.cognome}}" src="{{autore.avatar}}">
+                            </td>
+                            <td>
+                                {{autore.nome}}
+                            </td>
+                            <td>
+                                {{autore.cognome}}
+                            </td>
+                            <td>
+                                {{autore.email}}
+                            </td>
+                            <td>
+                                {% if autore.verifica %}
+                                <span class="badge badge-success">verificato</span>
+                                {% else %}
+                                <span class="badge badge-danger">non verificato</span>
+                                {% endif %}
 
-                                </td>
-                                <td>
+                            </td>
+                            <td>
 
-                                    <div class="dropdown">
-                                        <button aria-expanded="false" aria-haspopup="true" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="autore_menu" type="button">
-                                            gestisci
-                                        </button>
-                                        <div aria-labelledby="autore_menu" class="dropdown-menu">
-                                            <a class="dropdown-item text-primary" href="#">info</a>
-                                            {% if autore.verifica %}
-                                                <a class="dropdown-item text-danger" href="#">disabilita</a>
-                                            {% else %}
-                                                <a class="dropdown-item text-success" href="#">abilita</a>
-                                            {% endif %}
-                                            {# <a class="dropdown-item text-white bg-danger" href="{{site_url}}index.php?controller=gestione_utenti&action=eliminaAutore&id={{autore.id_autore}}">elimina</a> #}
-                                            <a class="dropdown-item text-white bg-danger" href="{{ link('gestione_utenti','eliminaAutore',{'id':autore.id_autore}) }}">elimina</a>
-                                        </div>
+                                <div class="dropdown">
+                                    <button aria-expanded="false" aria-haspopup="true"
+                                        class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="autore_menu"
+                                        type="button">
+                                        gestisci
+                                    </button>
+                                    <div aria-labelledby="autore_menu" class="dropdown-menu">
+                                        <a class="dropdown-item text-primary" href="#">info</a>
+                                        {% if autore.verifica %}
+                                        <a class="dropdown-item text-danger" href="#">disabilita</a>
+                                        {% else %}
+                                        <a class="dropdown-item text-success" href="#">abilita</a>
+                                        {% endif %}
+                                        {# <a class="dropdown-item text-white bg-danger" href="{{site_url}}index.php?controller=gestione_utenti&action=eliminaAutore&id={{autore.id_autore}}">elimina</a> #}
+                                        <a class="dropdown-item text-white bg-danger"
+                                            href="{{ link('gestione_utenti','eliminaAutore',{'id':autore.id_autore}) }}">elimina</a>
                                     </div>
+                                </div>
 
-                                </td>
-                            </tr>
+                            </td>
+                        </tr>
                         {% endfor %}
                         <!-- fuori dal loop  -->
                     </tbody>
