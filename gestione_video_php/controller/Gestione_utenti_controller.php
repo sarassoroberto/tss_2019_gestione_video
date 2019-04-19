@@ -17,12 +17,46 @@ class Gestione_utenti_controller
         $view = new ViewCore();
         echo $view->render(
             'gestione_utenti\tutti_gli_utenti.html',
-            ['autori' => $res]
+            [
+                'autori' => $res,
+                'sezione' => 'Tutti gli utenti',
+            ]
         );
 
+    }
 
+    public function disabilitati()
+    {
+        //echo "sono il metodo tutti: " . __CLASS__ . " " . __FUNCTION__ . '<br>';
 
-        //print_r($twig);
+        $utentiDao = new AutoreDao();
+        $res = $utentiDao->read();
+
+        $view = new ViewCore();
+        echo $view->render(
+            'gestione_utenti\tutti_gli_utenti.html',
+            [
+                'sezione' => 'Utenti disabilitati',
+                'autori' => $res,
+            ]
+        );
+    }
+
+    public function abilitati()
+    {
+        //echo "sono il metodo tutti: " . __CLASS__ . " " . __FUNCTION__ . '<br>';
+
+        $utentiDao = new AutoreDao();
+        $res = $utentiDao->read();
+
+        $view = new ViewCore();
+        echo $view->render(
+            'gestione_utenti\tutti_gli_utenti.html',
+            [
+                'autori' => $res,
+                'sezione' => 'Utenti Abilitati',
+            ]
+        );
     }
 
     public function eliminaAutore()
@@ -37,7 +71,6 @@ class Gestione_utenti_controller
             $dao = new AutoreDao();
             $dao->delete($id_autore);
         }
-
 
         $url = RouterCore::link('gestione_utenti', 'tutti');
         header("Location: $url");
