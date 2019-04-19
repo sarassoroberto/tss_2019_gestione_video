@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-        <title>Star Admin Free Bootstrap-4 Admin Dashboard Template</title>
-        <base
-        href="view/">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Star Admin Free Bootstrap-4 Admin Dashboard Template</title>
+    <base href="view/">
 
-        <!-- plugins:css -->
-        <link href="vendors/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet">
-        <link href="vendors/css/vendor.bundle.base.css" rel="stylesheet">
-        <link href="vendors/css/vendor.bundle.addons.css" rel="stylesheet">
-        <!-- endinject -->
-        <!-- plugin css for this page -->
-        <!-- End plugin css for this page -->
-        <!-- inject:css -->
-        <link
-        href="css/style.css" rel="stylesheet"> <!-- endinject -->
-        <link href="images/favicon.png" rel="shortcut icon" />
+    <!-- plugins:css -->
+    <link href="vendors/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="vendors/css/vendor.bundle.base.css" rel="stylesheet">
+    <link href="vendors/css/vendor.bundle.addons.css" rel="stylesheet">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link href="css/style.css" rel="stylesheet"> <!-- endinject -->
+    <link href="images/favicon.png" rel="shortcut icon" />
 
-    </head>
+</head>
 
-    <body>
-        <div class="container-scroller">
-            {% include "partial/navbar.html" %}
+<body>
+    <div class="container-scroller">
+        {% include "partial/navbar.html" %}
 
-            <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper">
 
-                {% include "partial/sidebar.html" %}
-                <div class="main-panel">
-                    <div class="content-wrapper">
+            {% include "partial/sidebar.html" %}
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    {% block sezione %}
+                    <h1 class="h3">{{ sezione }}</h1>
+                    {% endblock %}
 
-                        {% block content %}
+                    {% block content %}
 
-                            <h1>
-                                Base sono il genitore
+                    <h1>
+                        Base sono il genitore
 
-                            </h1>
+                    </h1>
 
-                        {% endblock %}
+                    {% endblock %}
 
 
-                    </div>
-                    <!-- content-wrapper ends -->
-                    {% include "partial/footer.html" %}
                 </div>
-                <!-- main-panel ends -->
+                <!-- content-wrapper ends -->
+                {% include "partial/footer.html" %}
             </div>
-            <!-- page-body-wrapper ends -->
+            <!-- main-panel ends -->
         </div>
-        <!-- container-scroller -->
-        <!-- plugins:js -->
-        <script src="vendors/js/vendor.bundle.base.js">
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="vendors/js/vendor.bundle.base.js">
 
 
 
-</script>
-        <script src="vendors/js/vendor.bundle.addons.js">
+    </script>
+    <script src="vendors/js/vendor.bundle.addons.js">
 
 
 
-</script>
-        <!-- endinject -->
-        <!-- Plugin js for this page-->
-        <!-- End plugin js for this page-->
-        <!-- inject:js -->
-        <script src="../../js/off-canvas.js">
-</script>
-        <script src="../../js/misc.js">
+    </script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js">
+    </script>
+    <script src="../../js/misc.js">
 
 
 
-</script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
+    </script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
     <!-- End custom js for this page-->
 
-<script src="js/tabella_utenti.js"></script></body></html>
+    <script src="js/tabella_utenti.js"></script>
+</body>
+
+</html>
