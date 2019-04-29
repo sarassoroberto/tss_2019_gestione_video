@@ -1,6 +1,6 @@
 <?php
 
-class Gestione_utenti_controller
+class Gestione_Video_controller
 {
     public function __construct()
     {
@@ -11,15 +11,15 @@ class Gestione_utenti_controller
     {
         //echo "sono il metodo tutti: " . __CLASS__ . " " . __FUNCTION__ . '<br>';
 
-        $utentiDao = new AutoreDao();
-        $res = $utentiDao->read();
+        // $videoDao = new AutoreDao();
+        // $res = $videoDao->read();
 
         $view = new ViewCore();
         echo $view->render(
-            'gestione_utenti\tutti_gli_utenti.html',
+            'gestione_video\tutti_i_video.html',
             [
                 'autori' => $res,
-                'sezione' => 'Tutti gli utenti',
+                'sezione' => 'Tutti i video',
             ]
         );
 
@@ -29,14 +29,14 @@ class Gestione_utenti_controller
     {
         //echo "sono il metodo tutti: " . __CLASS__ . " " . __FUNCTION__ . '<br>';
 
-        $utentiDao = new AutoreDao();
-        $res = $utentiDao->read();
+        $videoDao = new AutoreDao();
+        $res = $videoDao->read();
 
         $view = new ViewCore();
         echo $view->render(
-            'gestione_utenti\tutti_gli_utenti.html',
+            'gestione_video\tutti_i_video.html',
             [
-                'sezione' => 'Utenti disabilitati',
+                'sezione' => 'video disabilitati',
                 'autori' => $res,
             ]
         );
@@ -46,15 +46,15 @@ class Gestione_utenti_controller
     {
         //echo "sono il metodo tutti: " . __CLASS__ . " " . __FUNCTION__ . '<br>';
 
-        $utentiDao = new AutoreDao();
-        $res = $utentiDao->read();
+        $videoDao = new AutoreDao();
+        $res = $videoDao->read();
 
         $view = new ViewCore();
         echo $view->render(
-            'gestione_utenti\tutti_gli_utenti.html',
+            'gestione_video\tutti_i_video.html',
             [
                 'autori' => $res,
-                'sezione' => 'Utenti Abilitati',
+                'sezione' => 'video abilitati',
             ]
         );
     }
@@ -72,11 +72,11 @@ class Gestione_utenti_controller
             $dao->delete($id_autore);
         }
 
-        $url = RouterCore::link('gestione_utenti', 'tutti');
+        $url = RouterCore::link('gestione_video', 'tutti');
         header("Location: $url");
     }
 
-    public function eliminaUtenti()
+    public function eliminavideo()
     {
         echo __FUNCTION__ . " ";
         // $ids_autore = filter_input(INPUT_POST, 'id_autore', null, array(
@@ -96,7 +96,7 @@ class Gestione_utenti_controller
             $dao->delete($id_autore);
         }
 
-        $url = RouterCore::link('gestione_utenti', 'tutti');
+        $url = RouterCore::link('gestione_video', 'tutti');
         header("Location: $url");
 
         ///print_r($_POST['id_autore']);
@@ -112,7 +112,7 @@ class Gestione_utenti_controller
 
         $view = new ViewCore();
         echo $view->render(
-            'gestione_utenti\info_utente.html',
+            'gestione_video\info_utente.html',
             [
                 'autori' => $res,
                 'sezione' => 'Informazioni autore: [nome] [cognome]',
